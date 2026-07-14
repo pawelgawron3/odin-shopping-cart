@@ -1,0 +1,27 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--clr-navbar-background);
+  padding: 1.2rem 4rem;
+  box-shadow: 0 4px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.navbar li {
+  color: aliceblue;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar li:hover {
+  transform: scale(1.05);
+}
