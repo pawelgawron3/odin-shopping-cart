@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import hero1 from "../assets/carlos-vaz-unsplash.jpg";
 import hero2 from "../assets/molly-mears-unsplash.jpg";
@@ -40,6 +40,13 @@ const heroSlides = [
 export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slide = heroSlides[currentSlide];
+
+  useEffect(() => {
+    heroSlides.forEach(({ image }) => {
+      const img = new Image();
+      img.src = image;
+    });
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === heroSlides.length - 1 ? 0 : prev + 1));
