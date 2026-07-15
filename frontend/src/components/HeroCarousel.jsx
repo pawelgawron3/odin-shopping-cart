@@ -51,7 +51,7 @@ export default function HeroCarousel() {
 
   return (
     <div className="heroCarousel" aria-live="polite">
-      <div key={slide.id} className="hero-slide">
+      <div key={currentSlide} className="hero-slide">
         <img src={slide.image} alt={slide.title} />
 
         <div className="hero-overlay"></div>
