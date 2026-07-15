@@ -156,3 +156,22 @@
 .hero-indicators button:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
+.hero-cta {
+  z-index: 3;
+  position: absolute;
+  right: 2rem;
+  bottom: 1.5rem;
+  padding: 0.8rem 1.4rem;
+  border: none;
+  background: white;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+  background: black;
+  color: white;
+}
