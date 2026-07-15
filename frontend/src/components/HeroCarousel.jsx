@@ -4,6 +4,7 @@ import hero1 from "../assets/carlos-vaz-unsplash.jpg";
 import hero2 from "../assets/molly-mears-unsplash.jpg";
 import hero3 from "../assets/tamara-bellis-unsplash.jpg";
 import hero4 from "../assets/vooglam-eyewear-unsplash.jpg";
+import hero5 from "../assets/ulla-shinami-unsplash.jpg";
 import "../styles/HeroCarousel.css";
 
 const heroSlides = [
@@ -34,6 +35,13 @@ const heroSlides = [
     title: "See Beyond Trends",
     description:
       "Discover handcrafted frames that combine comfort, quality, and lasting style.",
+  },
+  {
+    id: 4,
+    image: hero5,
+    title: "Refined Vision",
+    description:
+      "Experience eyewear where minimalist design meets exceptional craftsmanship and everyday comfort.",
   },
 ];
 
