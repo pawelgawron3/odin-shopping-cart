@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import hero1 from "../assets/carlos-vaz-unsplash.jpg";
 import hero2 from "../assets/molly-mears-unsplash.jpg";
 import hero3 from "../assets/tamara-bellis-unsplash.jpg";
@@ -40,14 +41,36 @@ export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slide = heroSlides[currentSlide];
 
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === heroSlides.length - 1 ? 0 : prev + 1));
+  };
+
+  const previousSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? heroSlides.length - 1 : prev - 1));
+  };
+
   return (
     <div className="heroCarousel">
-      <img src={slide.image} alt={slide.title} />
+      <div key={slide.id} className="hero-slide">
+        <img src={slide.image} alt={slide.title} />
 
-      <div className="hero-content">
-        <span>New collection</span>
-        <h2>{slide.title}</h2>
-        <p>{slide.description}</p>
+        <div className="hero-overlay"></div>
+
+        <div className="hero-content">
+          <span>New collection</span>
+          <h2>{slide.title}</h2>
+          <p>{slide.description}</p>
+        </div>
+      </div>
+
+      <div className="hero-buttons">
+        <button onClick={previousSlide} aria-label="Previous slide">
+          <ChevronLeft size={32} />
+        </button>
+
+        <button onClick={nextSlide} aria-label="Next slide">
+          <ChevronRight size={32} />
+        </button>
       </div>
     </div>
   );
