@@ -50,7 +50,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <div className="heroCarousel">
+    <div className="heroCarousel" aria-live="polite">
       <div key={slide.id} className="hero-slide">
         <img src={slide.image} alt={slide.title} />
 
@@ -71,6 +71,17 @@ export default function HeroCarousel() {
         <button onClick={nextSlide} aria-label="Next slide">
           <ChevronRight size={32} />
         </button>
+      </div>
+
+      <div className="hero-indicators">
+        {heroSlides.map((slide) => (
+          <button
+            key={slide.id}
+            onClick={() => setCurrentSlide(slide.id)}
+            aria-label={`Go to slide ${slide.id + 1}`}
+            className={currentSlide === slide.id ? "active" : ""}
+          />
+        ))}
       </div>
     </div>
   );
