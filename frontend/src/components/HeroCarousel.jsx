@@ -83,6 +83,8 @@ export default function HeroCarousel() {
           />
         ))}
       </div>
+
+      <button className="hero-cta">Explore Collection</button>
     </div>
   );
 }
