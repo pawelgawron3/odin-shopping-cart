@@ -3,6 +3,7 @@ import "../styles/App.css";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import HeroCarousel from "./HeroCarousel";
+import ShopByCategory from "./ShopByCategory";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header></Header>
       <Navbar></Navbar>
       <HeroCarousel></HeroCarousel>
+      <ShopByCategory></ShopByCategory>
     </>
   );
 }
