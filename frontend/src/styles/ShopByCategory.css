@@ -1,6 +1,18 @@
 .shop-categories {
+  position: relative;
   padding: 6rem 4rem;
   background-color: #fff;
+}
+
+.shop-categories::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #ffc038, transparent);
 }
 
 .section-heading {
@@ -8,13 +20,27 @@
   margin-bottom: 3.5rem;
 }
 
-.section-heading span {
-  display: inline-block;
-  margin-bottom: 0.75rem;
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.section-label::before,
+.section-label::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: #ffc038;
+}
+
+.section-label-text {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.35rem;
   color: #8b8b8b;
+  margin-right: -0.35rem;
 }
 
 .section-heading h2 {
