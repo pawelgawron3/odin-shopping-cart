@@ -1,0 +1,86 @@
+.why-velora {
+  padding: 6rem 4rem;
+  background-color: #faf9f6;
+}
+
+.why-section-heading {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.why-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.why-section-label::before,
+.why-section-label::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: #ffc038;
+}
+
+.why-section-label-text {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: #8b8b8b;
+  margin-right: -0.3rem;
+}
+
+.why-section-heading h2 {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 500;
+  color: #111;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.benefit-card {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 16px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.benefit-card:hover svg {
+  transform: scale(1.1);
+}
+
+.benefit-card svg {
+  margin-bottom: 1.5rem;
+  color: #ffc038;
+  transition: transform 0.3s ease;
+}
+
+.benefit-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.benefit-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  letter-spacing: 0.01rem;
+}
