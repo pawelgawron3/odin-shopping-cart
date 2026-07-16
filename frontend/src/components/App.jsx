@@ -4,6 +4,7 @@ import Header from "./Header";
 import Navbar from "./Navbar";
 import HeroCarousel from "./HeroCarousel";
 import ShopByCategory from "./ShopByCategory";
+import WhyChooseVelora from "./WhyChooseVelora";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navbar></Navbar>
       <HeroCarousel></HeroCarousel>
       <ShopByCategory></ShopByCategory>
+      <WhyChooseVelora></WhyChooseVelora>
     </>
   );
 }
