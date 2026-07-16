@@ -8,7 +8,9 @@ export default function ShopByCategory() {
   return (
     <section className="shop-categories">
       <div className="section-heading">
-        <span>Discover</span>
+        <span className="section-label">
+          <span className="section-label-text">Discover</span>
+        </span>
         <h2>Shop by Category</h2>
       </div>
 
