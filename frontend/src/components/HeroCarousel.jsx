@@ -5,6 +5,7 @@ import "../styles/HeroCarousel.css";
 
 export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const slide = heroSlides[currentSlide];
 
   useEffect(() => {
@@ -15,6 +16,8 @@ export default function HeroCarousel() {
   }, []);
 
   useEffect(() => {
+    if (isPaused) return;
+
     const interval = setInterval(() => {
       setCurrentSlide((prev) =>
         prev === heroSlides.length - 1 ? 0 : prev + 1,
@@ -22,7 +25,7 @@ export default function HeroCarousel() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isPaused]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === heroSlides.length - 1 ? 0 : prev + 1));
@@ -33,7 +36,12 @@ export default function HeroCarousel() {
   };
 
   return (
-    <div className="heroCarousel" aria-live="polite">
+    <div
+      className="heroCarousel"
+      aria-live="polite"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <div key={currentSlide} className="hero-slide">
         <img src={slide.image} alt={slide.title} />
 
