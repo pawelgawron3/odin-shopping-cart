@@ -14,6 +14,16 @@ export default function HeroCarousel() {
     });
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) =>
+        prev === heroSlides.length - 1 ? 0 : prev + 1,
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === heroSlides.length - 1 ? 0 : prev + 1));
   };
