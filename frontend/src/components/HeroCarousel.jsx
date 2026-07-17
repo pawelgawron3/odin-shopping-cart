@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import heroSlides from "../helpers/heroSlides";
-import "../styles/HeroCarousel.css";
+import styles from "../styles/HeroCarousel.module.css";
 
 export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -37,24 +37,24 @@ export default function HeroCarousel() {
 
   return (
     <div
-      className="heroCarousel"
+      className={styles.heroCarousel}
       aria-live="polite"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div key={currentSlide} className="hero-slide">
+      <div key={currentSlide} className={styles.heroSlide}>
         <img src={slide.image} alt={slide.title} />
 
-        <div className="hero-overlay"></div>
+        <div className={styles.heroOverlay}></div>
 
-        <div className="hero-content">
+        <div className={styles.heroContent}>
           <span>New collection</span>
           <h2>{slide.title}</h2>
           <p>{slide.description}</p>
         </div>
       </div>
 
-      <div className="hero-buttons">
+      <div className={styles.heroButtons}>
         <button onClick={previousSlide} aria-label="Previous slide">
           <ChevronLeft size={32} />
         </button>
@@ -64,18 +64,20 @@ export default function HeroCarousel() {
         </button>
       </div>
 
-      <div className="hero-indicators">
+      <div className={styles.heroIndicators}>
         {heroSlides.map((slide) => (
           <button
             key={slide.id}
             onClick={() => setCurrentSlide(slide.id)}
             aria-label={`Go to slide ${slide.id + 1}`}
-            className={currentSlide === slide.id ? "active" : ""}
+            className={`${styles.indicator} ${
+              currentSlide === slide.id ? styles.indicatorActive : ""
+            }`}
           />
         ))}
       </div>
 
-      <button className="hero-cta">Explore Collection</button>
+      <button className={styles.heroCta}>Explore Collection</button>
     </div>
   );
 }

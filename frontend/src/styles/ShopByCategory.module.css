@@ -1,10 +1,10 @@
-.shop-categories {
+.shopCategories {
   position: relative;
   padding: 6rem 4rem;
   background-color: #fff;
 }
 
-.shop-categories::before {
+.shopCategories::before {
   content: "";
   position: absolute;
   top: 0;
@@ -15,27 +15,27 @@
   background: linear-gradient(to right, transparent, #ffc038, transparent);
 }
 
-.section-heading {
+.sectionHeading {
   text-align: center;
   margin-bottom: 3.5rem;
 }
 
-.section-label {
+.sectionLabel {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
   margin-bottom: 1rem;
 }
 
-.section-label::before,
-.section-label::after {
+.sectionLabel::before,
+.sectionLabel::after {
   content: "";
   width: 30px;
   height: 1px;
   background: #ffc038;
 }
 
-.section-label-text {
+.sectionLabelText {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.35rem;
@@ -43,24 +43,24 @@
   margin-right: -0.35rem;
 }
 
-.section-heading h2 {
+.sectionHeading h2 {
   font-family: var(--font-heading);
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 500;
   color: #111;
 }
 
-.categories-grid {
+.categoriesGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
-.category-general {
+.categoryGeneral {
   grid-column: 1 / -1;
 }
 
-.category-card {
+.categoryCard {
   position: relative;
   min-height: 320px;
   display: flex;
@@ -75,12 +75,12 @@
     box-shadow 0.4s ease;
 }
 
-.category-card:hover {
+.categoryCard:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 30px rgba(0, 0, 0, 0.25);
 }
 
-.category-card img {
+.categoryCard img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -89,31 +89,31 @@
   transition: transform 0.5s ease;
 }
 
-.category-card:hover img {
+.categoryCard:hover img {
   transform: scale(1.08);
 }
 
-.category-men img {
+.categoryMen img {
   object-position: center 25%;
 }
 
-.category-women img {
+.categoryWomen img {
   object-position: center 60%;
 }
 
-.category-overlay {
+.categoryOverlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.15));
   z-index: 1;
 }
 
-.category-content {
+.categoryContent {
   position: relative;
   z-index: 2;
 }
 
-.category-card h3 {
+.categoryCard h3 {
   font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 500;
@@ -121,7 +121,7 @@
   margin-bottom: 0.5rem;
 }
 
-.category-card .explore-link {
+.exploreLink {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -131,6 +131,6 @@
   transition: transform 0.3s ease;
 }
 
-.category-card:hover .explore-link {
+.categoryCard:hover .exploreLink {
   transform: translateX(8px);
 }

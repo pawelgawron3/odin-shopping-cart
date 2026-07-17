@@ -39,13 +39,13 @@
   gap: 1rem;
 }
 
-.cart-div {
+.cartDiv {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.cart-div .cart-count {
+.cartCount {
   position: absolute;
   right: -4px;
   top: -8px;
