@@ -1,4 +1,3 @@
-import "../styles/reset.css";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import HeroCarousel from "./HeroCarousel";
