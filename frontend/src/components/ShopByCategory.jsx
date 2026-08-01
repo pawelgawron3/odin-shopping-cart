@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
 import menCategory from "../assets/josias-garibay-unsplash.jpg";
 import womenCategory from "../assets/valeria-lendel-unsplash.jpg";
@@ -15,7 +16,10 @@ export default function ShopByCategory() {
       </div>
 
       <div className={styles.categoriesGrid}>
-        <article className={`${styles.categoryCard} ${styles.categoryMen}`}>
+        <Link
+          to={"/products"}
+          className={`${styles.categoryCard} ${styles.categoryMen}`}
+        >
           <img src={menCategory} alt="Men's eyewear" />
 
           <div className={styles.categoryOverlay}></div>
@@ -26,8 +30,11 @@ export default function ShopByCategory() {
               Explore <ArrowRight size={16} />
             </p>
           </div>
-        </article>
-        <article className={`${styles.categoryCard} ${styles.categoryWomen}`}>
+        </Link>
+        <Link
+          to={"/products"}
+          className={`${styles.categoryCard} ${styles.categoryWomen}`}
+        >
           <img src={womenCategory} alt="Women's eyewear" />
 
           <div className={styles.categoryOverlay}></div>
@@ -38,8 +45,11 @@ export default function ShopByCategory() {
               Explore <ArrowRight size={16} />
             </p>
           </div>
-        </article>
-        <article className={`${styles.categoryCard} ${styles.categoryGeneral}`}>
+        </Link>
+        <Link
+          to={"/products"}
+          className={`${styles.categoryCard} ${styles.categoryGeneral}`}
+        >
           <img src={generalCategory} alt="Eyewear" />
 
           <div className={styles.categoryOverlay}></div>
@@ -50,7 +60,7 @@ export default function ShopByCategory() {
               Explore <ArrowRight size={16} />
             </p>
           </div>
-        </article>
+        </Link>
       </div>
     </section>
   );

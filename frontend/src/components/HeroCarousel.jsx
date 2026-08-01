@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import heroSlides from "../helpers/heroSlides";
 import styles from "../styles/HeroCarousel.module.css";
@@ -77,7 +78,9 @@ export default function HeroCarousel() {
         ))}
       </div>
 
-      <button className={styles.heroCta}>Explore Collection</button>
+      <Link to={"/products"} className={styles.heroCta}>
+        Explore Collection
+      </Link>
     </div>
   );
 }
