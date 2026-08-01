@@ -1,27 +1,9 @@
-import { useState, useEffect } from "react";
-import { getProducts } from "../services/productsApi";
+import useProducts from "../hooks/useProducts";
 import ProductCard from "../components/ProductCard";
 import styles from "../styles/Products.module.css";
 
 export default function Products() {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    async function fetchProducts() {
-      try {
-        const data = await getProducts();
-        setProducts(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchProducts();
-  }, []);
+  const { products, loading, error } = useProducts();
 
   if (loading) {
     return <p>Loading...</p>; // Add spinner
