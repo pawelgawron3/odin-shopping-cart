@@ -11,7 +11,7 @@ export async function getProducts() {
     }
 
     const data = response.json();
-    return (data.products, map(normalizeProduct));
+    return data.products.map(normalizeProduct);
   } catch (err) {
     console.log(err);
   }
