@@ -1,3 +1,5 @@
+import normalizeProduct from "../helpers/normalizeProduct";
+
 const API_URL = "https://dummyjson.com/products/category/sunglasses";
 
 export async function getProducts() {
@@ -9,7 +11,7 @@ export async function getProducts() {
     }
 
     const data = response.json();
-    return data.products;
+    return (data.products, map(normalizeProduct));
   } catch (err) {
     console.log(err);
   }
