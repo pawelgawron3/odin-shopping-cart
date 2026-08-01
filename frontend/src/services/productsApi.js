@@ -1,6 +1,6 @@
 const API_URL = "https://dummyjson.com/products/category/sunglasses";
 
-export async function GetProducts() {
+export async function getProducts() {
   try {
     const response = await fetch(API_URL);
 
