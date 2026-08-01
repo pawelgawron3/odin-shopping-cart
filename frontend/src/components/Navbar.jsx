@@ -1,14 +1,25 @@
+import { Link } from "react-router";
 import styles from "../styles/Navbar.module.css";
 
 export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <ul>
-        <li>Home</li>
-        <li>Collection</li>
-        <li>Cart</li>
-        <li>About</li>
-        <li>Contact</li>
+        <Link to={"/"} className={styles.item}>
+          Home
+        </Link>
+        <Link to={"/products"} className={styles.item}>
+          Collection
+        </Link>
+        <Link to={"/"} className={styles.item}>
+          Cart
+        </Link>
+        <Link to={"/"} className={styles.item}>
+          About
+        </Link>
+        <Link to={"/"} className={styles.item}>
+          Contact
+        </Link>
       </ul>
     </nav>
   );

@@ -13,7 +13,7 @@
   gap: 3rem;
 }
 
-.navbar li {
+.item {
   color: aliceblue;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -22,6 +22,6 @@
   cursor: pointer;
 }
 
-.navbar li:hover {
+.item:hover {
   transform: scale(1.05);
 }
