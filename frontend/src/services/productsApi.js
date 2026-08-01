@@ -10,7 +10,7 @@ export async function getProducts() {
       throw new Error("Failed to fetch products");
     }
 
-    const data = response.json();
+    const data = await response.json();
     return data.products.map(normalizeProduct);
   } catch (err) {
     console.log(err);
