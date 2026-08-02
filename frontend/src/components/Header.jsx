@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { Search, ShoppingBag } from "lucide-react";
 import styles from "../styles/Header.module.css";
 
@@ -6,10 +7,10 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      <Link className={styles.logo}>
         <h1>Velora</h1>
         <span>Eyewear</span>
-      </div>
+      </Link>
 
       <div className={styles.actions}>
         <button aria-label="Search">
