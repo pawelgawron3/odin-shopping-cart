@@ -2,7 +2,7 @@ import { Children } from "react";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import Products from "../pages/Products";
-// import ProductDetails from "../pages/ProductDetails";
+import ProductDetails from "../pages/ProductDetails";
 // import Cart from "../pages/Cart";
 import Error from "../pages/Error";
 
@@ -20,10 +20,10 @@ const routes = [
         path: "products",
         element: <Products />,
       },
-      //   {
-      //     path: "products/:id",
-      //     element: <ProductDetails />,
-      //   },
+      {
+        path: "products/:id",
+        element: <ProductDetails />,
+      },
       //   {
       //     path: "cart",
       //     element: <Cart />,
