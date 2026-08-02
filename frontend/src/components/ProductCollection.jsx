@@ -2,7 +2,7 @@ import useProducts from "../hooks/useProducts";
 import ProductCard from "../components/ProductCard";
 import styles from "../styles/Products.module.css";
 
-export default function Products() {
+export default function ProductCollection() {
   const { products, loading, error } = useProducts();
 
   if (loading) {
