@@ -1,7 +1,9 @@
 import { Link } from "react-router";
 import styles from "../styles/ProductCard.module.css";
 
-export default function ProductCard({ key, product }) {
+export default function ProductCard({ product }) {
+  const key = product.id;
+
   return (
     <article className={styles.card}>
       <Link to={`/products/${key}`} className={styles.imageWrapper}>
