@@ -17,16 +17,16 @@ export default function ProductDetails() {
 
   return (
     <section className={styles.product}>
-      <img src={product.image} alt={product.name} />
+      <div className={styles.imageWrapper}>
+        <img src={product.image} alt={product.name} />
+      </div>
 
       <div className={styles.content}>
-        <h1>{product.name}</h1>
-
-        <p>{product.description}</p>
-
-        <span>${product.price}</span>
-
-        <button>Add to cart</button>
+        <span className={styles.label}>Premium Collection</span>
+        <h1 className={styles.name}>{product.name}</h1>
+        <p className={styles.description}>{product.description}</p>
+        <span className={styles.price}>{product.price + "$"}</span>
+        <button className={styles.addToCartBtn}>Add to cart</button>
       </div>
     </section>
   );
