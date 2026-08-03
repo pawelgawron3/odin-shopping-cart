@@ -107,13 +107,13 @@
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 0.8rem;
-  cursor: pointer;
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
 }
 
-.addToCartBtn:hover {
+.addToCartBtn:hover,
+.quantity button:hover {
   background-color: #ffc038;
   color: #111;
   transform: translateY(-3px);
@@ -161,4 +161,26 @@
 
 .activeThumbnail {
   border-color: #111;
+}
+
+/* QUANTITY */
+
+.quantity {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.quantity button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #111;
+  color: white;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.info {
+  font-size: clamp(1.5rem, 2vw, 3rem);
 }
