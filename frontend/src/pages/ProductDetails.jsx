@@ -1,7 +1,8 @@
 import { useParams } from "react-router";
-import useProduct from "../hooks/useProduct";
-import styles from "../styles/ProductDetails.module.css";
 import { useState, useEffect } from "react";
+import useProduct from "../hooks/useProduct";
+import Spinner from "../components/Spinner";
+import styles from "../styles/ProductDetails.module.css";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -16,7 +17,7 @@ export default function ProductDetails() {
   }, [product]);
 
   if (loading) {
-    return <p>Loading...</p>; // Add spinner
+    return <Spinner />;
   }
 
   if (error) {

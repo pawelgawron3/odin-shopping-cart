@@ -1,12 +1,13 @@
 import useProducts from "../hooks/useProducts";
 import ProductCard from "../components/ProductCard";
+import Spinner from "./Spinner";
 import styles from "../styles/ProductCollection.module.css";
 
 export default function ProductCollection() {
   const { products, loading, error } = useProducts();
 
   if (loading) {
-    return <p>Loading...</p>; // Add spinner
+    return <Spinner />;
   }
 
   if (error) {
