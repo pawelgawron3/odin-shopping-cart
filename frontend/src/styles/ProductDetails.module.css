@@ -9,9 +9,9 @@
 }
 
 .imageWrapper {
-  position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  position: relative;
   align-items: center;
   background-color: #faf9f6;
   border-radius: 24px;
@@ -32,6 +32,17 @@
   height: 80%;
   object-fit: contain;
   transition: transform 0.5s ease;
+  animation: fade 0.7s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .imageWrapper:hover img {
@@ -39,7 +50,20 @@
 }
 
 .content {
+  animation: fadeFromLeft 1s;
   max-width: 520px;
+}
+
+@keyframes fadeFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 .label {
@@ -105,4 +129,36 @@
   .content {
     max-width: none;
   }
+}
+
+/* GALLERY */
+
+.gallery {
+  display: flex;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.thumbnail {
+  width: 120px;
+  height: 120px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+  border-color: #ffc038;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.activeThumbnail {
+  border-color: #111;
 }
