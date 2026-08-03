@@ -5,5 +5,6 @@ export default function normalizeProduct(product) {
     description: product.description,
     price: product.price,
     image: product.images[0],
+    images: product.images,
   };
 }
