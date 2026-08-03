@@ -24,7 +24,7 @@ export default function ProductCollection() {
 
       <div className={styles.grid}>
         {products.map((product) => (
-          <ProductCard product={product} />
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </section>
