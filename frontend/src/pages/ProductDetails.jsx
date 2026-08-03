@@ -11,6 +11,15 @@ export default function ProductDetails() {
 
   const { product, loading, error } = useProduct(id);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+
+  function increaseQuantity() {
+    setQuantity((prev) => prev + 1);
+  }
+
+  function decreaseQuantity() {
+    setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
+  }
 
   useEffect(() => {
     if (product) {
@@ -33,7 +42,12 @@ export default function ProductDetails() {
         selectedImage={selectedImage}
         setSelectedImage={setSelectedImage}
       />
-      <ProductInfo product={product} />
+      <ProductInfo
+        product={product}
+        quantity={quantity}
+        increaseQuantity={increaseQuantity}
+        decreaseQuantity={decreaseQuantity}
+      />
     </section>
   );
 }
