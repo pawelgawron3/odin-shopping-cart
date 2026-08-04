@@ -1,13 +1,15 @@
 import { Link } from "react-router";
+import useCart from "../hooks/useCart";
 import { Search, ShoppingBag } from "lucide-react";
 import styles from "../styles/Header.module.css";
 
 export default function Header() {
-  let cartCount = 2; // test
+  const { items } = useCart();
+  const cartQuantity = items.reduce((acc, curr) => acc + curr.quantity, 0);
 
   return (
     <header className={styles.header}>
-      <Link className={styles.logo}>
+      <Link to={"/"} className={styles.logo}>
         <h1>Velora</h1>
         <span>Eyewear</span>
       </Link>
@@ -21,8 +23,8 @@ export default function Header() {
           <button aria-label="Shopping cart">
             <ShoppingBag size={28} />
 
-            {cartCount > 0 && (
-              <span className={styles.cartCount}>{cartCount}</span>
+            {cartQuantity > 0 && (
+              <span className={styles.cartCount}>{cartQuantity}</span>
             )}
           </button>
         </div>
