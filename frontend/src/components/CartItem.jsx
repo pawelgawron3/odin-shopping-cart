@@ -26,7 +26,12 @@ export default function CartItem({ cartItem }) {
           </button>
         </div>
       </div>
-      <button onClick={() => removeFromCart(cartItem.id)}>Remove</button>
+      <button
+        className={styles.remove}
+        onClick={() => removeFromCart(cartItem.id)}
+      >
+        Remove
+      </button>
     </article>
   );
 }
