@@ -17,7 +17,7 @@ export default function Navbar() {
         <Link to={"/"} className={styles.item}>
           About
         </Link>
-        <Link to={"/"} className={styles.item}>
+        <Link to={"contact"} className={styles.item}>
           Contact
         </Link>
       </ul>
