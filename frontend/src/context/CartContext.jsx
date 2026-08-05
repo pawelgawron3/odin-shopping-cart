@@ -41,6 +41,12 @@ function cartReducer(state, action) {
       };
     }
 
+    case "CLEAR_CART": {
+      return {
+        ...initialState,
+      };
+    }
+
     default:
       return state;
   }
@@ -71,9 +77,15 @@ export function CartProvider({ children }) {
     });
   }
 
+  function clearCart() {
+    dispatch({
+      type: "CLEAR_CART",
+    });
+  }
+
   return (
     <CartContext.Provider
-      value={{ items: state.items, addToCart, removeFromCart }}
+      value={{ items: state.items, addToCart, removeFromCart, clearCart }}
     >
       {children}
     </CartContext.Provider>
