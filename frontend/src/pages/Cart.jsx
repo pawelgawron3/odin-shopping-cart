@@ -1,7 +1,7 @@
 import CartItem from "../components/CartItem";
 import CartSummary from "../components/CartSummary";
 import useCart from "../hooks/useCart";
-import styles from "../styles/CartItem.module.css";
+import styles from "../styles/Cart.module.css";
 
 export default function Cart() {
   const { items, clearCart } = useCart();
