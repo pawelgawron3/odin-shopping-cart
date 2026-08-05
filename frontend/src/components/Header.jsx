@@ -19,7 +19,7 @@ export default function Header() {
           <Search size={28} />
         </button>
 
-        <div className={styles.cartDiv}>
+        <Link to={"cart"} className={styles.cartDiv}>
           <button aria-label="Shopping cart">
             <ShoppingBag size={28} />
 
@@ -27,7 +27,7 @@ export default function Header() {
               <span className={styles.cartCount}>{cartQuantity}</span>
             )}
           </button>
-        </div>
+        </Link>
       </div>
     </header>
   );
