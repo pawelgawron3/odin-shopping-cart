@@ -10,6 +10,7 @@ const ACTIONS = {
   ADD_ITEM: "ADD_ITEM",
   REMOVE_ITEM: "REMOVE_ITEM",
   CLEAR_CART: "CLEAR_CART",
+  UPDATE_QUANTITY: "UPDATE_QUANTITY",
 };
 
 function cartReducer(state, action) {
@@ -53,6 +54,19 @@ function cartReducer(state, action) {
       };
     }
 
+    case UPDATE_QUANTITY: {
+      const { id, quantity } = action.payload;
+
+      return {
+        ...state,
+        items: state.items.map((cartItem) =>
+          cartItem.id === id
+            ? { ...cartItem, quantity: Math.max(1, quantity) }
+            : cartItem,
+        ),
+      };
+    }
+
     default:
       return state;
   }
@@ -89,9 +103,22 @@ export function CartProvider({ children }) {
     });
   }
 
+  function updateQuantity(id, quantity) {
+    dispatch({
+      type: ACTIONS.UPDATE_QUANTITY,
+      payload: { id, quantity },
+    });
+  }
+
   return (
     <CartContext.Provider
-      value={{ items: state.items, addToCart, removeFromCart, clearCart }}
+      value={{
+        items: state.items,
+        addToCart,
+        removeFromCart,
+        clearCart,
+        updateQuantity,
+      }}
     >
       {children}
     </CartContext.Provider>
