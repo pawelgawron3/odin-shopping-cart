@@ -11,7 +11,7 @@ export default function Navbar() {
         <Link to={"/products"} className={styles.item}>
           Collection
         </Link>
-        <Link to={"/"} className={styles.item}>
+        <Link to={"cart"} className={styles.item}>
           Cart
         </Link>
         <Link to={"/"} className={styles.item}>
