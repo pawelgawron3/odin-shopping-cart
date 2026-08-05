@@ -35,14 +35,10 @@ function cartReducer(state, action) {
     case "REMOVE_ITEM": {
       const id = action.payload;
 
-      const existingItem = state.items.find((cartItem) => cartItem.id === id);
-
-      if (existingItem) {
-        return {
-          ...state,
-          items: state.items.filter((cartItem) => cartItem.id !== id),
-        };
-      }
+      return {
+        ...state,
+        items: state.items.filter((cartItem) => cartItem.id !== id),
+      };
     }
 
     default:
@@ -68,9 +64,7 @@ export function CartProvider({ children }) {
     });
   }
 
-  function removeFromCart(product) {
-    const id = product.id;
-
+  function removeFromCart(id) {
     dispatch({
       type: "REMOVE_ITEM",
       payload: id,
