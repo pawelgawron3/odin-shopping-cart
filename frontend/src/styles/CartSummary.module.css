@@ -1,0 +1,43 @@
+.summary {
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 12px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary h2 {
+  font-family: var(--font-heading);
+  margin-bottom: 1.5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.row:last-of-type {
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 1.5rem;
+}
+
+.checkout {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.9rem;
+  background-color: #ffc038;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition:
+    opacity 0.2s ease,
+    transform 0.3s ease-in-out;
+}
+
+.checkout:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
