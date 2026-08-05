@@ -11,18 +11,20 @@ export default function Cart() {
       <h1>Your Cart</h1>
 
       {items.length === 0 ? (
-        <p>Your cart is empty!</p>
+        <p className={styles.emptyCartInfo}>Your cart is empty!</p>
       ) : (
         <div className={styles.items}>
-          {items.map((cartItem) => (
-            <CartItem key={cartItem.id} cartItem={cartItem} />
-          ))}
+          <div className={styles.products}>
+            {items.map((cartItem) => (
+              <CartItem key={cartItem.id} cartItem={cartItem} />
+            ))}
+
+            <button className={styles.clearCartBtn} onClick={clearCart}>
+              Clear Cart
+            </button>
+          </div>
 
           <CartSummary />
-
-          <button className={styles.clearCartBtn} onClick={clearCart}>
-            Clear Cart
-          </button>
         </div>
       )}
     </section>
