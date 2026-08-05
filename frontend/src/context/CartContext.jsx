@@ -54,7 +54,7 @@ function cartReducer(state, action) {
       };
     }
 
-    case UPDATE_QUANTITY: {
+    case ACTIONS.UPDATE_QUANTITY: {
       const { id, quantity } = action.payload;
 
       return {
