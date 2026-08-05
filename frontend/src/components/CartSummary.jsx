@@ -6,9 +6,8 @@ export default function CartSummary() {
 
   const totalItems = items.reduce((acc, curr) => acc + curr.quantity, 0);
 
-  const totalPrice = items.reduce(
-    (acc, curr) => acc + curr.quantity * curr.price,
-    0,
+  const totalPrice = Number(
+    items.reduce((acc, curr) => acc + curr.quantity * curr.price, 0).toFixed(2),
   );
 
   return (
@@ -22,8 +21,7 @@ export default function CartSummary() {
         <span>Total</span>
         <span>{totalPrice + "$"}</span>
       </div>
-      <button className={styles.checkout}>Checkout</button> /* Payment system
-      not implemented*/
+      <button className={styles.checkout}>Checkout</button>
     </aside>
   );
 }
