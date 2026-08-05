@@ -6,9 +6,15 @@ const initialState = {
   items: [],
 };
 
+const ACTIONS = {
+  ADD_ITEM: "ADD_ITEM",
+  REMOVE_ITEM: "REMOVE_ITEM",
+  CLEAR_CART: "CLEAR_CART",
+};
+
 function cartReducer(state, action) {
   switch (action.type) {
-    case "ADD_ITEM": {
+    case ACTIONS.ADD_ITEM: {
       const item = action.payload;
 
       const existingItem = state.items.find(
@@ -32,7 +38,7 @@ function cartReducer(state, action) {
       };
     }
 
-    case "REMOVE_ITEM": {
+    case ACTIONS.REMOVE_ITEM: {
       const id = action.payload;
 
       return {
@@ -41,7 +47,7 @@ function cartReducer(state, action) {
       };
     }
 
-    case "CLEAR_CART": {
+    case ACTIONS.CLEAR_CART: {
       return {
         ...initialState,
       };
@@ -65,21 +71,21 @@ export function CartProvider({ children }) {
     };
 
     dispatch({
-      type: "ADD_ITEM",
+      type: ACTIONS.ADD_ITEM,
       payload: item,
     });
   }
 
   function removeFromCart(id) {
     dispatch({
-      type: "REMOVE_ITEM",
+      type: ACTIONS.REMOVE_ITEM,
       payload: id,
     });
   }
 
   function clearCart() {
     dispatch({
-      type: "CLEAR_CART",
+      type: ACTIONS.CLEAR_CART,
     });
   }
 
