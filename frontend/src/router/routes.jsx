@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import Products from "../pages/Products";
 import ProductDetails from "../pages/ProductDetails";
-// import Cart from "../pages/Cart";
+import Cart from "../pages/Cart";
 import Error from "../pages/Error";
 
 const routes = [
@@ -24,10 +24,10 @@ const routes = [
         path: "products/:id",
         element: <ProductDetails />,
       },
-      //   {
-      //     path: "cart",
-      //     element: <Cart />,
-      //   },
+      {
+        path: "cart",
+        element: <Cart />,
+      },
     ],
   },
 ];
