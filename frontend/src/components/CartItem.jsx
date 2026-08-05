@@ -2,7 +2,7 @@ import styles from "../styles/CartItem.module.css";
 import useCart from "../hooks/useCart";
 
 export default function CartItem({ cartItem }) {
-  const { removeFromCart } = useCart();
+  const { removeFromCart, updateQuantity } = useCart();
 
   return (
     <article className={styles.cartItem}>
@@ -10,7 +10,21 @@ export default function CartItem({ cartItem }) {
       <div className={styles.itemContent}>
         <h3>{cartItem.name}</h3>
         <p>{cartItem.price + "$"}</p>
-        <span>Quantity: {cartItem.quantity}</span>
+        <div className={styles.quantity}>
+          <button
+            onClick={() => updateQuantity(cartItem.id, cartItem.quantity - 1)}
+          >
+            -
+          </button>
+
+          <span>Quantity: {cartItem.quantity}</span>
+
+          <button
+            onClick={() => updateQuantity(cartItem.id, cartItem.quantity + 1)}
+          >
+            +
+          </button>
+        </div>
       </div>
       <button onClick={() => removeFromCart(cartItem.id)}>Remove</button>
     </article>
