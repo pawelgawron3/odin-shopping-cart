@@ -21,7 +21,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.legal}>
-        <span>© 2026 Paweł Gawron. All rights reserved.</span>
+        <span>© 2026 Velora. All rights reserved.</span>
         <span>Built as part of The Odin Project.</span>
         <span>Velora™ - Premium Eyewear Concept.</span>
       </div>
