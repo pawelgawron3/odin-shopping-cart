@@ -14,7 +14,7 @@ export default function Navbar() {
         <Link to={"cart"} className={styles.item}>
           Cart
         </Link>
-        <Link to={"/"} className={styles.item}>
+        <Link to={"about"} className={styles.item}>
           About
         </Link>
         <Link to={"contact"} className={styles.item}>
