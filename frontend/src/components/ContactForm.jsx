@@ -26,7 +26,16 @@ export default function ContactForm() {
           <textarea rows={6} required placeholder="Type here..."></textarea>
         </label>
 
-        <button className={styles.submitBtn}>Send Message</button>
+        <button
+          className={styles.submitBtn}
+          onClick={() =>
+            alert(
+              "This is a demo project. Payment system has not been implemented yet.",
+            )
+          }
+        >
+          Send Message
+        </button>
       </form>
 
       <div className={styles.info}>
