@@ -1,5 +1,5 @@
-import githubIcon from "../assets/github.svg";
-import styles from "../styles/Footer.module.css";
+import githubIcon from "../../assets/github.svg";
+import styles from "../../styles/Footer.module.css";
 
 export default function Footer() {
   return (

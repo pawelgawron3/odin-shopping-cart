@@ -1,5 +1,5 @@
-import styles from "../styles/ProductDetails.module.css";
-import useCart from "../hooks/useCart";
+import styles from "../../styles/ProductDetails.module.css";
+import useCart from "../../hooks/useCart";
 
 export default function ProductInfo({
   product,

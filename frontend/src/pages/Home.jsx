@@ -1,6 +1,6 @@
-import HeroCarousel from "../components/HeroCarousel";
-import ShopByCategory from "../components/ShopByCategory";
-import WhyChooseVelora from "../components/WhyChooseVelora";
+import HeroCarousel from "../components/brand/HeroCarousel";
+import ShopByCategory from "../components/brand/ShopByCategory";
+import WhyChooseVelora from "../components/brand/WhyChooseVelora";
 
 export default function Home() {
   return (

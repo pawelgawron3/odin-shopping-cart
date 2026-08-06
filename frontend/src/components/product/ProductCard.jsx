@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import styles from "../styles/ProductCard.module.css";
+import styles from "../../styles/ProductCard.module.css";
 
 export default function ProductCard({ product }) {
   const key = product.id;

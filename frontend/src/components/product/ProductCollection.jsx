@@ -1,7 +1,7 @@
-import useProducts from "../hooks/useProducts";
-import ProductCard from "../components/ProductCard";
-import Spinner from "./Spinner";
-import styles from "../styles/ProductCollection.module.css";
+import useProducts from "../../hooks/useProducts";
+import ProductCard from "./ProductCard";
+import Spinner from "../common/Spinner";
+import styles from "../../styles/ProductCollection.module.css";
 
 export default function ProductCollection() {
   const { products, loading, error } = useProducts();

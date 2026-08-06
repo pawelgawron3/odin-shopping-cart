@@ -1,5 +1,5 @@
-import useCart from "../hooks/useCart";
-import styles from "../styles/CartSummary.module.css";
+import useCart from "../../hooks/useCart";
+import styles from "../../styles/CartSummary.module.css";
 
 export default function CartSummary() {
   const { items } = useCart();

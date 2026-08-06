@@ -1,9 +1,9 @@
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
-import menCategory from "../assets/josias-garibay-unsplash.jpg";
-import womenCategory from "../assets/valeria-lendel-unsplash.jpg";
-import generalCategory from "../assets/wu-yi-unsplash.jpg";
-import styles from "../styles/ShopByCategory.module.css";
+import menCategory from "../../assets/josias-garibay-unsplash.jpg";
+import womenCategory from "../../assets/valeria-lendel-unsplash.jpg";
+import generalCategory from "../../assets/wu-yi-unsplash.jpg";
+import styles from "../../styles/ShopByCategory.module.css";
 
 export default function ShopByCategory() {
   return (

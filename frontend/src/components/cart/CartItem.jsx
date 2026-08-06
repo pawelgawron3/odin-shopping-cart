@@ -1,5 +1,5 @@
-import styles from "../styles/CartItem.module.css";
-import useCart from "../hooks/useCart";
+import styles from "../../styles/CartItem.module.css";
+import useCart from "../../hooks/useCart";
 
 export default function CartItem({ cartItem }) {
   const { removeFromCart, updateQuantity } = useCart();

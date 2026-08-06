@@ -1,7 +1,7 @@
 import { Link } from "react-router";
-import useCart from "../hooks/useCart";
+import useCart from "../../hooks/useCart";
 import { Search, ShoppingBag } from "lucide-react";
-import styles from "../styles/Header.module.css";
+import styles from "../../styles/Header.module.css";
 
 export default function Header() {
   const { items } = useCart();

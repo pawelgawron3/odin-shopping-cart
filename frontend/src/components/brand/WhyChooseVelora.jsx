@@ -1,5 +1,5 @@
-import styles from "../styles/WhyChooseVelora.module.css";
-import whyVeloraData from "../helpers/whyVeloraData";
+import styles from "../../styles/WhyChooseVelora.module.css";
+import whyVeloraData from "../../helpers/whyVeloraData";
 
 export default function WhyChooseVelora() {
   return (

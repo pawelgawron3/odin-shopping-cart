@@ -1,4 +1,4 @@
-import styles from "../styles/ProductDetails.module.css";
+import styles from "../../styles/ProductDetails.module.css";
 
 export default function ProductGallery({
   product,

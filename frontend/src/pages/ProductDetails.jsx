@@ -1,9 +1,9 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import useProduct from "../hooks/useProduct";
-import ProductGallery from "../components/ProductGallery";
-import ProductInfo from "../components/ProductInfo";
-import Spinner from "../components/Spinner";
+import ProductGallery from "../components/product/ProductGallery";
+import ProductInfo from "../components/product/ProductInfo";
+import Spinner from "../components/common/Spinner";
 import styles from "../styles/ProductDetails.module.css";
 
 export default function ProductDetails() {

@@ -1,5 +1,5 @@
-import CartItem from "../components/CartItem";
-import CartSummary from "../components/CartSummary";
+import CartItem from "../components/cart/CartItem";
+import CartSummary from "../components/cart/CartSummary";
 import useCart from "../hooks/useCart";
 import styles from "../styles/Cart.module.css";
 

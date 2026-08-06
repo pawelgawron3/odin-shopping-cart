@@ -1,4 +1,4 @@
-import styles from "../styles/ContactForm.module.css";
+import styles from "../../styles/ContactForm.module.css";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 
 export default function ContactForm() {

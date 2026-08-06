@@ -1,7 +1,7 @@
 import { Clock } from "lucide-react";
-import styles from "../styles/BrandSupport.module.css";
-import brandSupportData from "../helpers/brandSupportData";
-import specialistData from "../helpers/specialistData";
+import styles from "../../styles/BrandSupport.module.css";
+import brandSupportData from "../../helpers/brandSupportData";
+import specialistData from "../../helpers/specialistData";
 
 export default function BrandSupport() {
   return (

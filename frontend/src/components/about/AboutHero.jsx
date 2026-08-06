@@ -1,5 +1,5 @@
-import styles from "../styles/About.module.css";
-import img from "../assets/wu-yi-unsplash.jpg";
+import styles from "../../styles/About.module.css";
+import img from "../../assets/wu-yi-unsplash.jpg";
 
 export default function AboutHero() {
   return (

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import heroSlides from "../helpers/heroSlides";
-import styles from "../styles/HeroCarousel.module.css";
+import heroSlides from "../../helpers/heroSlides";
+import styles from "../../styles/HeroCarousel.module.css";
 
 export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
