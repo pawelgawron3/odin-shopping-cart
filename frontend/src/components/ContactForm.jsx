@@ -2,6 +2,12 @@ import styles from "../styles/ContactForm.module.css";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 
 export default function ContactForm() {
+  function handleCheckout() {
+    alert(
+      "This is a demo project. Payment system has not been implemented yet.",
+    );
+  }
+
   return (
     <section className={styles.main}>
       <h2>Contact us</h2>
@@ -26,14 +32,7 @@ export default function ContactForm() {
           <textarea rows={6} required placeholder="Type here..."></textarea>
         </label>
 
-        <button
-          className={styles.submitBtn}
-          onClick={() =>
-            alert(
-              "This is a demo project. Payment system has not been implemented yet.",
-            )
-          }
-        >
+        <button className={styles.submitBtn} onClick={handleCheckout}>
           Send Message
         </button>
       </form>
