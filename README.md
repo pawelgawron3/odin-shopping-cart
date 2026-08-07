@@ -123,4 +123,4 @@ src/
 
 ## 🌐 Live Demo
 
-### 🚀 [View Velora Live](add_deployment_link_on_netlify)
+### 🚀 [View Velora Live](https://velora-eyewear.netlify.app)
